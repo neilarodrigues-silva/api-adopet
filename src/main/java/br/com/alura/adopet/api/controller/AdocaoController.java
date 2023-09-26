@@ -51,18 +51,18 @@ public class AdocaoController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping
-    public ResponseEntity<List<DadosDetalhesPet>> listarTodosDisponiveis() {
-
-        List<Pet> pets = repository.findAll();
-        List<DadosDetalhesPet> disponiveis = new ArrayList<>();
-        for (Pet pet : pets) {
-            if (pet.getAdotado() == false) {
-                disponiveis.add(new DadosDetalhesPet(pet));
-            }
-        }
-        return ResponseEntity.ok(disponiveis);
+//    @GetMapping
+//    public ResponseEntity<List<DadosDetalhesPet>> listarTodosDisponiveis() {
+//
+//        List<Pet> pets = repository.findAll();
+//        List<DadosDetalhesPet> disponiveis = new ArrayList<>();
+//        for (Pet pet : pets) {
+//            if (pet.getAdotado() == false) {
+//                disponiveis.add(new DadosDetalhesPet(pet));
+//            }
+//        }
+//        return ResponseEntity.ok(disponiveis);
     }
 
-}
+
 
